@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { @apply bg-background text-white antialiased; }
+
+/* Glassmorphism utility */
+.glass-card { @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl; }
+
+/* Gradient text */
+.gradient-text { @apply bg-clip-text text-transparent bg-gradient-to-r from-brandStart via-brandMid to-brandEnd; }
+
+/* Button base */
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition-transform duration-200 will-change-transform; }
+.btn-primary { @apply btn bg-gradient-to-r from-brandStart via-brandMid to-brandEnd text-white shadow-soft hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brandMid; }
+.btn-ghost { @apply btn bg-white/5 border border-white/10 hover:scale-[1.03]; }
+
+/* Active link underline */
+.nav-active { @apply relative; }
+.nav-active::after { content: ""; @apply absolute left-0 right-0 -bottom-1 h-0.5 bg-gradient-to-r from-brandStart via-brandMid to-brandEnd rounded-full; }
+
+/* Animated background gradient fallback (if particles disabled) */
+.animated-gradient { background: linear-gradient(-45deg, #0B0F1A, #141B2D, #0B0F1A, #101626); background-size: 400% 400%; animation: gradient 18s ease infinite; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
