@@ -1,6 +1,6 @@
 import React from 'react'
 import { useReducedMotion } from 'framer-motion'
-import { Particles } from 'tsparticles-react'
+import Particles from 'react-tsparticles'
 import { loadSlim } from 'tsparticles-engine'
 
 export default function ParticlesBg() {
