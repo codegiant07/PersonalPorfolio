@@ -1,17 +1,13 @@
 import React from 'react'
 import { useReducedMotion } from 'framer-motion'
 import Particles from 'react-tsparticles'
-import { loadSlim } from 'tsparticles-engine'
 
 export default function ParticlesBg() {
   const reduce = useReducedMotion()
-  const init = async (engine) => {
-    await loadSlim(engine)
-  }
   if (reduce) return null
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 opacity-25">
-      <Particles init={init} options={{
+      <Particles options={{
         background: { color: 'transparent' },
         fpsLimit: 30,
         particles: {
