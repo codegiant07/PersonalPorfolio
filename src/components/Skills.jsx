@@ -1,22 +1,22 @@
 import React from 'react'
 import SectionWrapper from './SectionWrapper'
 import GlassCard from './GlassCard'
-import { SiCplusplus, SiC, SiJavascript, SiHtml5, SiCss3, SiReact, SiFlutter, SiNodedotjs, SiGithub, SiMysql, SiDart, SiWindows } from '@icons-pack/react-simple-icons'
+import { Code, Database, Monitor, Terminal, Github, Cpu } from 'lucide-react'
 
 const items = [
-  { name: 'C++', Icon: SiCplusplus },
-  { name: 'C', Icon: SiC },
-  { name: 'SQL', text: 'SQL' },
-  { name: 'HTML', Icon: SiHtml5 },
-  { name: 'CSS', Icon: SiCss3 },
-  { name: 'JavaScript', Icon: SiJavascript },
-  { name: 'Dart', Icon: SiDart },
-  { name: 'ReactJS', Icon: SiReact },
-  { name: 'Flutter', Icon: SiFlutter },
-  { name: 'Node.js', Icon: SiNodedotjs },
-  { name: 'GitHub', Icon: SiGithub },
-  { name: 'MySQL', Icon: SiMysql },
-  { name: 'Windows', Icon: SiWindows },
+  { name: 'C++', Icon: Code },
+  { name: 'C', Icon: Code },
+  { name: 'SQL', Icon: Database },
+  { name: 'HTML', text: 'HTML' },
+  { name: 'CSS', text: 'CSS' },
+  { name: 'JavaScript', Icon: Code },
+  { name: 'Dart', text: 'Dart' },
+  { name: 'ReactJS', Icon: Monitor },
+  { name: 'Flutter', text: 'Flutter' },
+  { name: 'Node.js', Icon: Terminal },
+  { name: 'GitHub', Icon: Github },
+  { name: 'MySQL', text: 'MySQL' },
+  { name: 'Windows', Icon: Cpu },
   { name: 'MS Word', text: 'Word' },
   { name: 'MS PowerPoint', text: 'PowerPoint' },
   { name: 'Touch Typing', text: 'Typing' },
@@ -34,7 +34,7 @@ export default function Skills() {
           {items.map(({ name, Icon, text }) => (
             <GlassCard key={name} className="group grid place-items-center p-4 text-center transition hover:scale-[1.02]">
               {Icon ? (
-                <Icon title={name} className="h-8 w-8" color="#e5e7eb" />
+                <Icon title={name} className="h-8 w-8 text-white" />
               ) : (
                 <span className="text-sm text-white/80" title={name}>{text}</span>
               )}
