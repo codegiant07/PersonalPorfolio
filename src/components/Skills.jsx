@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionWrapper from './SectionWrapper'
 import GlassCard from './GlassCard'
-import { SiCplusplus, SiC, SiJavascript, SiHtml5, SiCss3, SiReact, SiFlutter, SiNodedotjs, SiGithub, SiMysql, SiDart, SiWindows } from 'simple-icons-react'
+import { SiCplusplus, SiC, SiJavascript, SiHtml5, SiCss3, SiReact, SiFlutter, SiNodedotjs, SiGithub, SiMysql, SiDart, SiWindows } from '@icons-pack/react-simple-icons'
 
 const items = [
   { name: 'C++', Icon: SiCplusplus },
